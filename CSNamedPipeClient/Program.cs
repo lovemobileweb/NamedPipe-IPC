@@ -2,8 +2,6 @@
 
 class Program
 {
-    const int BUFFER_SIZE = 1024;  // 1 KB
-
     /// <summary>
     /// Main
     /// </summary>
@@ -11,7 +9,7 @@ class Program
     {
         {
             IpcMessage req = new IpcMessage(IpcCommand.IpcRequestListGpo, new IpcRequestListGpo());
-            IpcMessage res = IpcModule.GetIpcResponse("PPLPM-RGT", req);
+            IpcMessage res = IpcModule.GetIpcResponse("OBJECT-IPC", req);
             if (res != null)
             {
                 res.IpcCommand = res.IpcCommand;
@@ -19,7 +17,7 @@ class Program
         }
         {
             IpcMessage req = new IpcMessage(IpcCommand.IpcRequestExit, null);
-            IpcMessage res = IpcModule.GetIpcResponse("PPLPM-RGT", req);
+            IpcMessage res = IpcModule.GetIpcResponse("OBJECT-IPC", req);
             if (res != null)
             {
                 res.IpcCommand = res.IpcCommand;
