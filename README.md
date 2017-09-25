@@ -1,2 +1,2 @@
 # NamedPipe-IPC
-C# projects for IPC using NamedPipe.
+C# projects for IPC using NamedPipe
